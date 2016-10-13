@@ -1,0 +1,76 @@
+h1{
+  text-align: center;
+
+}
+body{
+  background-image: url(switzerland_mountain_landscape_lungern_81174_1920x1080.jpg);
+  background-repeat: no-repeat;
+  margin-left: 0;
+  margin-right: 0;
+}
+.m{
+  display: inline-block;
+}
+#fmap{
+  margin-left:5%;
+  margin-right: 0;
+}
+#map{
+  margin-left:0;
+  margin-right: 5%;
+}
+#sw{
+  width:70%;
+  height:160px;
+  font-size: 35px;
+
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: lightblue;
+
+}
+#lmap{
+  margin-left: auto;
+  margin-right: auto;
+}
+#zimg{
+  width:60%;
+
+  margin-top: 66px;
+  margin-left: 0;
+  margin-bottom: 0px;
+  position:relative;
+  float:left;
+}
+#simg{
+  width:60%;
+  float:right;
+  margin-top: 0px;
+  margin-left: 40%;
+  margin-bottom: 30px;
+  position:relative;
+}
+h2{
+  font-size: 40px;
+
+  margin-right: 12%;
+  margin-top: 20%;
+  float:right;
+  position:static;
+}
+h3{
+  font-size: 40px;
+
+  margin-left: 12%;
+  margin-top: -15%;
+  float:left;
+  position:static;
+}
+footer{
+  font-size:12px;
+  height:50px;
+  position:relative;
+  margin-top: 400px;
+}

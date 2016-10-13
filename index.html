@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css"
+      href="style.css">
+      <link rel="icon"
+          href="icon1.gif"/>
+          <title>My Dream Vacation</title>
+      </head>
+      <body>
+        <h1>My Dream Vacation</h1>
+        <div id=fmap>
+        <div class=m id="map" style="width:45%;height:400px;background:yellow;
+                "></div>
+        <div class=m id="zmap" style="width:45%;height:400px;background:green
+                  "></div>
+        </div>
+        <p id=sw>
+          Switzerland is a peacful country in Europe, home to numerous
+          lakes, mountains, and high peaks of Alps.
+          Winter sports is very popular traveling activity.
+          It countains a lot of medieval architectures.
+
+        </p>
+        <div id="lmap" style="width:800px;height:300px;background:yellow;
+                "></div>
+        <div id=up><img src=zurich.jpg id=zimg>
+        <h2> &lt;----Zurich</h2></div>
+        <div id=down><img src=ski.jpg id=simg>
+          <h3>Skiing----&gt;</h3>
+        <footer>
+          credits:
+          www.getyourguide.com<br>
+         mapio.net<br>
+     http://www.dailymail.co.uk<br>
+     http://www.industcards.com/wte-switz.htm
+</footer></div>
+      <script>
+      function myMap() {
+        var mapCanvas = document.getElementById("map");
+        var myCenter =new google.maps.LatLng(46.831928, 8.2);
+        var mapOptions = {center: myCenter, zoom: 7, mapTypeId: google.maps.MapTypeId.roadmap};
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({
+          position: myCenter,
+          animation:google.maps.Animation.BOUNCE
+        });
+        marker.setMap(map);
+        var infowindow = new google.maps.InfoWindow({
+          content: "Switzerland"
+        });
+        infowindow.open(map,marker);
+
+        var zmapCanvas = document.getElementById("zmap");
+        var zCenter =new google.maps.LatLng(47.3769681,8.5355398);
+        var zmapOptions = {center: zCenter, zoom: 12, mapTypeId: "hybrid"};
+        var zmap = new google.maps.Map(zmapCanvas, zmapOptions);
+        var zmarker = new google.maps.Marker({
+        position: zCenter,
+          animation:google.maps.Animation.BOUNCE
+        });
+        zmarker.setMap(zmap);
+        var lmapCanvas = document.getElementById("lmap");
+        var lmyCenter =new google.maps.LatLng(46.2265469,6.1408917);
+        var lmapOptions = {center: lmyCenter, zoom: 18, mapTypeId: "satellite"};
+        var lmap = new google.maps.Map(lmapCanvas, lmapOptions);
+        var lmarker = new google.maps.Marker({
+          position: lmyCenter,
+          animation:google.maps.Animation.BOUNCE
+        });
+        lmarker.setMap(lmap);
+        var linfowindow = new google.maps.InfoWindow({
+          content: "United Nations Office at Geneva"
+        });
+        linfowindow.open(lmap,lmarker);
+      }
+      </script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+
+
+
+</html>
